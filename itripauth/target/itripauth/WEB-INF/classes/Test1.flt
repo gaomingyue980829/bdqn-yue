@@ -1,0 +1,8 @@
+这是一个txt
+<#list li as entity>
+    <#if entity.id==1>
+        ${entity.id}  ${entity.name}
+        <#else>
+        id不等于1
+    </#if>
+</#list>

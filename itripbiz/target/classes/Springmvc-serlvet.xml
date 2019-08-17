@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+        
+        <import resource="SpringMybatis_Config.xml"/>
+        
+        <!-- 扫描Controller包 -->
+        <context:component-scan base-package="com.bdqn,cn.itrip.dao,cn.itrip.common"/>
+        
+       <!--  配置视图解析器 -->
+       <!-- 对转向页面的路径解析  针对jsp模板的视图映射。prefix：前缀， suffix：后缀 -->
+        <bean id="viewResolvers" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        	<property name="prefix" value="/Manage/"/>
+        	<property name="suffix" value=".jsp"/>
+        </bean>
+        
+       <!--  上传图片 -->
+        <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+   		 <property name="maxUploadSize" value="5000000"/>
+   		 <property name="defaultEncoding" value="UTF-8"/>
+		</bean>
+		
+		<!--  拦截器 -->
+       <!--<mvc:interceptors>
+       		<mvc:interceptor>
+       			<mvc:mapping path="/AppInfo/*"/>
+       			<bean class="com.bdqn.filter.LoginFilter"></bean>
+       		</mvc:interceptor>
+       </mvc:interceptors>-->
+		
+		<!-- 静态资源文件 -->
+		<!--<mvc:resources mapping="statics/uploadfiles/**" location="/statics/uploadfiles/" />
+        <mvc:resources location="/css/" mapping="/css/**"/>
+        <mvc:resources location="/js/" mapping="/js/**"/>
+        <mvc:resources location="/" mapping="/*.html"/>-->
+        <mvc:annotation-driven/>
+        
+       
+</beans>

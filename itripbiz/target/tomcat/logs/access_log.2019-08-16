@@ -1,0 +1,9 @@
+127.0.0.1 - - [16/Aug/2019:07:57:58 +0800] "GET /biz/api/hotel/queryhotelfeature HTTP/1.0" 404 949 http-bio-8080-exec-3 84
+127.0.0.1 - - [16/Aug/2019:07:57:58 +0800] "GET /biz/api/hotel/queryhotcity/2 HTTP/1.0" 200 1198 http-bio-8080-exec-1 398
+127.0.0.1 - - [16/Aug/2019:07:57:58 +0800] "GET /biz/api/hotel/queryhotcity/1 HTTP/1.0" 200 1234 http-bio-8080-exec-2 398
+127.0.0.1 - - [16/Aug/2019:07:58:13 +0800] "GET /biz/api/hotel/queryhotelfeature HTTP/1.0" 404 949 http-bio-8080-exec-5 3
+127.0.0.1 - - [16/Aug/2019:07:58:13 +0800] "GET /biz/api/hotel/queryhotcity/2 HTTP/1.0" 200 1198 http-bio-8080-exec-4 13
+127.0.0.1 - - [16/Aug/2019:07:58:13 +0800] "GET /biz/api/hotel/queryhotcity/1 HTTP/1.0" 200 1234 http-bio-8080-exec-6 13
+127.0.0.1 - - [16/Aug/2019:07:59:01 +0800] "GET /biz/api/hotel/queryhotcity/2 HTTP/1.0" 200 1198 http-bio-8080-exec-7 10
+127.0.0.1 - - [16/Aug/2019:07:59:01 +0800] "GET /biz/api/hotel/queryhotelfeature HTTP/1.0" 404 949 http-bio-8080-exec-9 2
+127.0.0.1 - - [16/Aug/2019:07:59:01 +0800] "GET /biz/api/hotel/queryhotcity/1 HTTP/1.0" 200 1234 http-bio-8080-exec-8 8
